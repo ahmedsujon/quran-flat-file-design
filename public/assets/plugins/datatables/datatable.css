@@ -23,6 +23,7 @@
 .dataTable-bottom > nav:last-child,
 .dataTable-bottom > div:last-child {
 	float: right;
+	padding-bottom: 12px;
 }
 
 .dataTable-selector {
@@ -30,7 +31,8 @@
 }
 
 .dataTable-input {
-	padding: 6px 12px;
+	padding: 14px 12px;
+	width: 480px;
 }
 
 .dataTable-info {

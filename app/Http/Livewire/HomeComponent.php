@@ -12,7 +12,6 @@ class HomeComponent extends Component
 
     public function render()
     {
-        $ayat_words = AyatWord::where('arabic_root_word', 'like', '%'.$this->searchTerm.'%')->where('normalize_word', 'like', '%'.$this->searchTerm.'%')->where('Transliteration_word', 'like', '%'.$this->searchTerm.'%')->where('english_word', 'like', '%'.$this->searchTerm.'%')->get();
-        return view('livewire.home-component', ['ayat_words'=>$ayat_words])->layout('layouts.base');
+        return view('livewire.home-component')->layout('layouts.base');
     }
 }

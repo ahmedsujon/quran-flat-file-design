@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AyatWord extends Model
+class SuraAyat extends Model
 {
     use HasFactory;
-    protected $table = 'ayat_words';
+    protected $table = 'sura_ayats';
 }
