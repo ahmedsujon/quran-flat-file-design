@@ -7,10 +7,12 @@ use Livewire\Component;
 
 class HadithComponent extends Component
 {
+    public $sortingValue = 10, $searchTerm;
+
     public function render()
     {
-        $ayat_words = Hadith::where('arabic_root_word', 'like', '%'.$this->searchTerm.'%')->where('normalize_word', 'like', '%'.$this->searchTerm.'%')->where('Transliteration_word', 'like', '%'.$this->searchTerm.'%')->where('english_word', 'like', '%'.$this->searchTerm.'%')->get();
+        $hadith_references = Hadith::where('hadith_description', 'like', '%'.$this->searchTerm.'%')->get();
         
-        return view('livewire.hadith-component')->layout('layouts.base');
+        return view('livewire.hadith-component', ['hadith_references'=>$hadith_references])->layout('layouts.base');
     }
 }
