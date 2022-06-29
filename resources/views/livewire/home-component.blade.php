@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 col-xl-3">
                 <div class="card">
-                    <a href="">
+                    <a href="{{ route('ayat-word') }}">
                         <div class="card-header bg-primary">
                             <h4 class="card-title text-white">Ayat Word Main Table</h4>
                         </div>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6 col-xl-3">
                 <div class="card">
-                    <a href="">
+                    <a href="{{ route('sura-ayat') }}">
                         <div class="card-header bg-primary">
                             <h4 class="card-title text-white">Sura Ayat Table</h4>
                         </div>
@@ -31,7 +31,7 @@
             </div>
             <div class="col-md-6 col-xl-3">
                 <div class="card">
-                    <a href="">
+                    <a href="{{ route('hadith') }}">
                         <div class="card-header bg-primary">
                             <h4 class="card-title text-white">Hadith Reference Table</h4>
                         </div>

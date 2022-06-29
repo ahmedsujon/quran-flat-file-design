@@ -9,6 +9,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeComponent::class);
 
-Route::get('/ayat-word', AyatWordComponent::class);
-Route::get('/hadith', HadithComponent::class);
-Route::get('/sura-ayat', SurahAyatComponent::class);
+Route::get('/ayat-word', AyatWordComponent::class)->name('ayat-word');
+Route::get('/hadith', HadithComponent::class)->name('hadith');
+Route::get('/sura-ayat', SurahAyatComponent::class)->name('sura-ayat');
