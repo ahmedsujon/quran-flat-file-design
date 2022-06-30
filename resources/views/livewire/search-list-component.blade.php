@@ -6,10 +6,10 @@
                 <a style="padding: 20px; width: 300px;" href="{{ route('single.word.search') }}" class="btn btn-primary btn-lg px-4 gap-3">Quran Single
                     Word
                     Search</a>
-                <a style="padding: 20px; width: 300px;" href="{{ route('multi.single.word.search') }}" class="btn btn-primary btn-lg px-4 gap-3">Quran Multiple
-                    word (Either, OR)
+                <a style="padding: 20px; width: 300px;" href="{{ route('multiple.word.search') }}" class="btn btn-primary btn-lg px-4 gap-3">Quran Multiple
+                    Word (Either, OR)
                     Search</a>
-                <a style="padding: 20px; width: 300px;" href="" class="btn btn-primary btn-lg px-4 gap-3">Quran Multiple
+                <a style="padding: 20px; width: 300px;" href="{{ route('multiple.or.word.search') }}" class="btn btn-primary btn-lg px-4 gap-3">Quran Multiple
                     word (AND)
                     Search</a>
             </div>
