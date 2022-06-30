@@ -10,6 +10,6 @@ class MultipleOrWordSearchComponent extends Component
     public function render()
     {
         $multiple_or_words_search = AyatWord::get();
-        return view('livewire.multiple-or-word-search-component', ['multiple_or_words_search'=>$multiple_or_words_search]);
+        return view('livewire.multiple-or-word-search-component', ['multiple_or_words_search'=>$multiple_or_words_search])->layout('layouts.base');
     }
 }
