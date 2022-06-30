@@ -21,9 +21,9 @@
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                 <a style="padding: 20px; width: 300px;" href="{{ route('display.quran.arabic') }}" class="btn btn-primary btn-lg px-4 gap-3">Display Quran
                     In Arabic</a>
-                <a style="padding: 20px; width: 300px;" href="" class="btn btn-primary btn-lg px-4 gap-3">Quran
+                <a style="padding: 20px; width: 300px;" href="{{ route('search.using.transliteration') }}" class="btn btn-primary btn-lg px-4 gap-3">Quran
                     Search Using Transliteration</a>
-                <a style="padding: 20px; width: 300px;" href="" class="btn btn-primary btn-lg px-4 gap-3">Quran
+                <a style="padding: 20px; width: 300px;" href="{{ route('search.using.english.word') }}" class="btn btn-primary btn-lg px-4 gap-3">Quran
                     Search Using English Word/Subject
                 </a>
             </div>
