@@ -65,12 +65,16 @@
         }
     </style>
     <link href="{{ asset('css/heroes.css') }}" rel="stylesheet">
+    @stack('styles')
+    @livewireStyles
 </head>
 
 <body>
     <main>
         {{ $slot }}
     </main>
+    @stack('scripts')
+    @livewireScripts
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
