@@ -9,11 +9,12 @@ use App\Http\Livewire\SurahAyatComponent;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', HomeComponent::class);
+Route::get('/', HomeComponent::class)->name('website');
 
 Route::get('/quran-database-search', SearchListComponent::class)->name('database.search');
 
 Route::get('/quran-single-word-search', SingleSearchComponent::class)->name('single.word.search');
+Route::get('/multi-single-word-search', SingleSearchComponent::class)->name('multi.single.word.search');
 
 Route::get('/ayat-word', AyatWordComponent::class)->name('ayat-word');
 Route::get('/hadith', HadithComponent::class)->name('hadith');
