@@ -1,48 +1,10 @@
-<div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 col-xl-3">
-                <div class="card">
-                    <a href="{{ route('ayat-word') }}">
-                        <div class="card-header bg-primary">
-                            <h4 class="card-title text-white">Ayat Word Main Table</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text text-muted">Some quick example text to build on the card title and make
-                                up
-                                the bulk of the card's content.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3">
-                <div class="card">
-                    <a href="{{ route('sura-ayat') }}">
-                        <div class="card-header bg-primary">
-                            <h4 class="card-title text-white">Sura Ayat Table</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text text-muted">Some quick example text to build on the card title and make
-                                up
-                                the bulk of the card's content.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3">
-                <div class="card">
-                    <a href="{{ route('hadith') }}">
-                        <div class="card-header bg-primary">
-                            <h4 class="card-title text-white">Hadith Reference Table</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text text-muted">Some quick example text to build on the card title and make
-                                up
-                                the bulk of the card's content.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Quran Database Search</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium qui a, consectetur necessitatibus dolores cumque saepe quaerat totam, minus porro velit, beatae modi cum nobis eum. Earum similique dolor veniam.</p>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a style="padding: 20px; width: 300px;" href="" class="btn btn-primary btn-lg px-4 gap-3">English Search</a> <span style="padding-top: 3%;" class="justify-content-center">OR</span>
+            <a style="padding: 20px; width: 300px;" href="" class="btn btn-primary btn-lg px-4 gap-3">English Search</a>
         </div>
     </div>
-</div>
+</div> 
