@@ -35,7 +35,7 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter single word/subject..">
             <table id="myTable">
               <tr class="header">
                 <th>English-Word-Subject-Category</th>
@@ -55,7 +55,7 @@
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple word/subject..">
             <table id="myTable">
               <tr class="header">
                 <th>English Word-Subject-Category</th>
@@ -75,7 +75,7 @@
           </div>
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple word/subject..">
             <table id="myTable">
               <tr class="header">
                 <th>Sura Number</th>

@@ -18,7 +18,7 @@
   <div style="padding-left: 50px; padding-right: 50px;" class="row">
     <div style="padding-left: 20px;" class="card">
       <div class="card-body">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for..">
             <table id="myTable">
               <tr class="header">
                 <th>English-Word-Subject-Category</th>
