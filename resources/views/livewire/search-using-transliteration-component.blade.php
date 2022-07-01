@@ -57,7 +57,13 @@
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word..">
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word.."><span
+                style="padding-top: 12px;" class="justify-content-center">OR</span>
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word.."><span
+                style="padding-top: 12px;" class="justify-content-center">OR</span>
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word..">
+            </div>
             <table id="myTable">
               <tr class="header">
                 <th>NTransliteration Word</th>
@@ -79,7 +85,13 @@
           </div>
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word..">
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word.."><span
+                style="padding-top: 12px;" class="justify-content-center">AND</span>
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word.."><span
+                style="padding-top: 12px;" class="justify-content-center">AND</span>
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter multiple transliteration word..">
+            </div>
             <table id="myTable">
               <tr class="header">
                 <th>Sura Number</th>

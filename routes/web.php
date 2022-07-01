@@ -22,7 +22,7 @@ Route::get('/quran-database-search', SearchListComponent::class)->name('database
 
 Route::get('/quran-single-word-search', SingleSearchComponent::class)->name('single.word.search');
 Route::get('/multiple-word-search', MultipleWordSearchComponent::class)->name('multiple.word.search');
-Route::get('/multiple-or-word-search', MultipleWordSearchComponent::class)->name('multiple.or.word.search');
+Route::get('/multiple-and-word-search', MultipleOrWordSearchComponent::class)->name('multiple.or.word.search');
 Route::get('/display-quran-arabic', DisplayQuraArabicComponent::class)->name('display.quran.arabic');
 Route::get('/search-using-transliteration', SearchUsingTransliterationComponent::class)->name('search.using.transliteration');
 Route::get('/search-using-english-word-subject', SearchUsingEnglishWordComponent::class)->name('search.using.english.word');
