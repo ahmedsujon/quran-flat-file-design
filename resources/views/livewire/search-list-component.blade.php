@@ -34,7 +34,7 @@
                     Complete Quran Sorted By English Word/Subject</a>
                 <a style="padding: 20px; width: 300px;" href="{{ route('display.complete.quran.by.category') }}" class="btn btn-primary btn-lg px-4 gap-3">Display
                     Complete Quran Sorted By English Sub-Category</a>
-                    <a style="padding: 20px; width: 300px;" href="{{ route('display.complete.quran.by.category') }}" class="btn btn-primary btn-lg px-4 gap-3">Select One From Folling Searches</a>
+                    <a style="padding: 20px; width: 300px;" href="{{ route('search.dropdown') }}" class="btn btn-primary btn-lg px-4 gap-3">Select One From Folling Searches</a>
             </div>
         </div>
         

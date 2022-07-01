@@ -8,6 +8,7 @@ use App\Http\Livewire\HadithComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MultipleOrWordSearchComponent;
 use App\Http\Livewire\MultipleWordSearchComponent;
+use App\Http\Livewire\SearchDropDown;
 use App\Http\Livewire\SearchListComponent;
 use App\Http\Livewire\SearchUsingEnglishWordComponent;
 use App\Http\Livewire\SearchUsingTransliterationComponent;
@@ -26,6 +27,7 @@ Route::get('/multiple-and-word-search', MultipleOrWordSearchComponent::class)->n
 Route::get('/display-quran-arabic', DisplayQuraArabicComponent::class)->name('display.quran.arabic');
 Route::get('/search-using-transliteration', SearchUsingTransliterationComponent::class)->name('search.using.transliteration');
 Route::get('/search-using-english-word-subject', SearchUsingEnglishWordComponent::class)->name('search.using.english.word');
+Route::get('/search-dropdown', SearchDropDown::class)->name('search.dropdown');
 
 Route::get('/display-complete-quran-by-word', DisplayCompleteQuraWordComponent::class)->name('display.complete.quran-by.word');
 Route::get('/display-complete-quran-by-category', DisplayCompleteQuraCategoryComponent::class)->name('display.complete.quran.by.category');
