@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Livewire\AyatWordComponent;
+use App\Http\Livewire\DisplayCompleteQuraCategoryComponent;
+use App\Http\Livewire\DisplayCompleteQuraWordComponent;
 use App\Http\Livewire\DisplayQuraArabicComponent;
 use App\Http\Livewire\HadithComponent;
 use App\Http\Livewire\HomeComponent;
@@ -24,6 +26,9 @@ Route::get('/multiple-or-word-search', MultipleWordSearchComponent::class)->name
 Route::get('/display-quran-arabic', DisplayQuraArabicComponent::class)->name('display.quran.arabic');
 Route::get('/search-using-transliteration', SearchUsingTransliterationComponent::class)->name('search.using.transliteration');
 Route::get('/search-using-english-word-subject', SearchUsingEnglishWordComponent::class)->name('search.using.english.word');
+
+Route::get('/display-complete-quran-by-word', DisplayCompleteQuraWordComponent::class)->name('display.complete.quran-by.word');
+Route::get('/display-complete-quran-by-category', DisplayCompleteQuraCategoryComponent::class)->name('display.complete.quran.by.category');
 
 Route::get('/ayat-word', AyatWordComponent::class)->name('ayat-word');
 Route::get('/hadith', HadithComponent::class)->name('hadith');
