@@ -4,7 +4,7 @@
         <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium qui a, consectetur necessitatibus dolores cumque saepe quaerat totam, minus porro velit, beatae modi cum nobis eum. Earum similique dolor veniam.</p>
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
             <a style="padding: 20px; width: 300px;" href="{{ route('database.search') }}" class="btn btn-primary btn-lg px-4 gap-3">English Search</a> <span style="padding-top: 3%;" class="justify-content-center">OR</span>
-            <a style="padding: 20px; width: 300px;" href="{{ route('database.search') }}" class="btn btn-primary btn-lg px-4 gap-3">English Search</a>
+            <a style="padding: 20px; width: 300px;" href="{{ route('database.search') }}" class="btn btn-primary btn-lg px-4 gap-3">Arabic Search</a>
         </div>
     </div>
 </div> 
