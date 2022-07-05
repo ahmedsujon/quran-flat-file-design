@@ -21,10 +21,10 @@
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for..">
             <table id="myTable">
               <tr class="header">
-                <th>English-Word-Subsubject-Subcategory</th>
-                <th>English-Word-Subject-Category</th>
                 <th>Sura Number</th>
                 <th>Ayat Number </th>
+                <th>English-Word-Subsubject-Subcategory</th>
+                <th>English-Word-Subject-Category</th>
                 <th>Sura Ayat English Description</th>
                 <th>Hadith Description</th>
               </tr>

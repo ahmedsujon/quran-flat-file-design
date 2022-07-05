@@ -42,6 +42,8 @@
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root word..">
             <table id="myTable">
               <tr class="header">
+                <th>Surah Number</th>
+                <th>Ayat Number in Surah</th>
                 <th>Arabic Root Word</th>
                 <th>Normalize Arabic Word</th>
                 <th>Inference Flag</th>
@@ -54,6 +56,8 @@
                 <td>{{ $ayat_word->ayat_no }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->normalize_word }}</td>
+                <td>{{ $ayat_word->inference_flag }}</td>
+                <td>{{ $ayat_word->Transliteration_word }}</td>
                 <td>{{ $ayat_word->Transliteration_word }}</td>
               </tr>
               @endforeach
@@ -64,6 +68,8 @@
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter normailzed arabic words..">
             <table id="myTable">
               <tr class="header">
+                <th>Surah Number</th>
+                <th>Ayat Number in Surah</th>
                 <th>Normalize Arabic Word</th>
                 <th>Arabic Root Word</th>
                 <th>Inference Flag</th>
@@ -74,8 +80,9 @@
               <tr>
                 <td>{{ $ayat_word->surah_no }}</td>
                 <td>{{ $ayat_word->ayat_no }}</td>
-                <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->normalize_word }}</td>
+                <td>{{ $ayat_word->arabic_root_word }}</td>
+                <td>{{ $ayat_word->inference_flag }}</td>
                 <td>{{ $ayat_word->Transliteration_word }}</td>
               </tr>
               @endforeach
@@ -86,9 +93,9 @@
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran..">
             <table id="myTable">
               <tr class="header">
+                <th>Surah Number Key</th>
+                <th>Ayat Number in Surah</th>
                 <th>Sura Ayat Arabic Description</th>
-                <th>Sura Number Key </th>
-                <th>Ayat Number</th>
               </tr>
               @foreach ($ayat_words as $ayat_word)
               <tr>

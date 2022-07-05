@@ -36,10 +36,10 @@
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter root word..">
             <table id="myTable">
               <tr class="header">
+                <th>Sura Number</th>
+                <th>Ayat Number in Surah </th>
                 <th>Arabic Root Word</th>
                 <th>Normalized Arabic Word</th>
-                <th>Sura Number</th>
-                <th>Ayat Number in surah </th>
                 <th>Sura Ayat Arabic Description</th>
               </tr>
               @foreach ($display_quran_arabic as $ayat_word)
@@ -47,7 +47,7 @@
                 <td>{{ $ayat_word->surah_no }}</td>
                 <td>{{ $ayat_word->ayat_no }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
-                <td>{{ $ayat_word->arabic_root_word }}</td>
+                <td>{{ $ayat_word->normalize_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
               </tr>
               @endforeach
@@ -58,17 +58,17 @@
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter normailzed arabic word..">
             <table id="myTable">
               <tr class="header">
+                <th>Sura Number</th>
+                <th>Ayat Number in Surah</th>
                 <th>Normalized Arabic Word</th>
                 <th>Arabic Root Word</th>
-                <th>Sura Number</th>
-                <th>Ayat Number </th>
                 <th>Sura Ayat Arabic Description</th>
               </tr>
               @foreach ($display_quran_arabic as $ayat_word)
               <tr>
                 <td>{{ $ayat_word->surah_no }}</td>
                 <td>{{ $ayat_word->ayat_no }}</td>
-                <td>{{ $ayat_word->arabic_root_word }}</td>
+                <td>{{ $ayat_word->normalize_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
               </tr>

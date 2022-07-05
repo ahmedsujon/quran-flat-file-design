@@ -38,6 +38,8 @@
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter single word/subject..">
             <table id="myTable">
               <tr class="header">
+                <th>Sura Number</th>
+                <th>Ayat Number in Surah</th>
                 <th>English-Word-Subject-Category</th>
                 <th>Inference Flag</th>
                 <th>Sura Ayat English Description</th>
@@ -47,6 +49,8 @@
               <tr>
                 <td>{{ $ayat_word->surah_no }}</td>
                 <td>{{ $ayat_word->ayat_no }}</td>
+                <td>{{ $ayat_word->word_sub_category }}</td>
+                <td>{{ $ayat_word->inference_flag }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
               </tr>
@@ -64,6 +68,8 @@
             </div>
             <table id="myTable">
               <tr class="header">
+                <th>Sura Number</th>
+                <th>Ayat Number in Surah</th>
                 <th>English Word-Subject-Category</th>
                 <th>Inference Flag</th>
                 <th>Sura Ayat English Description</th>
@@ -73,6 +79,8 @@
               <tr>
                 <td>{{ $ayat_word->surah_no }}</td>
                 <td>{{ $ayat_word->ayat_no }}</td>
+                <td>{{ $ayat_word->word_sub_category }}</td>
+                <td>{{ $ayat_word->inference_flag }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
               </tr>

@@ -29,10 +29,10 @@
           </div>
             <table id="myTable">
               <tr class="header">
-                <th>English-Word-Subject-Category</th>
-                <th>English-Word-Subsubject-Subcategory</th>
                 <th>Sura Number</th>
                 <th>Ayat Number </th>
+                <th>English-Word-Subject-Category</th>
+                <th>English-Word-Subsubject-Subcategory</th>
                 <th>Sura Ayat English Description</th>
                 <th>Hadith Description</th>
               </tr>
@@ -40,7 +40,7 @@
               <tr>
                 <td>{{ $ayat_word->surah_no }}</td>
                 <td>{{ $ayat_word->ayat_no }}</td>
-                <td>{{ $ayat_word->arabic_root_word }}</td>
+                <td>{{ $ayat_word->word_sub_category }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
                 <td>{{ $ayat_word->arabic_root_word }}</td>
