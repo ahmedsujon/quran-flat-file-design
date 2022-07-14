@@ -23,14 +23,14 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($sura_ayats as $sura_ayat)
-                                      <tr>
+                                    <tr>
                                         <td>{{ $sura_ayat->surah_number }}</td>
                                         <td>{{ $sura_ayat->ayat_number }}</td>
                                         <td>{{ $sura_ayat->ayat_english_description }}</td>
                                         <td>{{ $sura_ayat->ayat_arabic_description }}</td>
                                         <td>{{ $sura_ayat->arabic_root_word }}</td>
                                         <td>{{ $sura_ayat->normalized_arabic_word }}</td>
-                                    </tr>   
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>

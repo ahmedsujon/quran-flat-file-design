@@ -104,10 +104,12 @@
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
             tabindex="0">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran.."><span
-                style="padding-top: 12px;" class="justify-content-center">OR</span>
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran.."><span
-                style="padding-top: 12px;" class="justify-content-center">OR</span>
+              <input type="text" id="myInput" onkeyup="myFunction()"
+                placeholder="Enter actual arabic words in quran.."><span style="padding-top: 12px;"
+                class="justify-content-center">OR</span>
+              <input type="text" id="myInput" onkeyup="myFunction()"
+                placeholder="Enter actual arabic words in quran.."><span style="padding-top: 12px;"
+                class="justify-content-center">OR</span>
               <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran..">
             </div>
             <table id="myTable">

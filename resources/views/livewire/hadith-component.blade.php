@@ -17,10 +17,10 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($hadith_references as $hadith_reference)
-                                      <tr>
+                                    <tr>
                                         <td>{{ $hadith_reference->hadith_referance }}</td>
                                         <td>{{ $hadith_reference->hadith_description }}</td>
-                                    </tr>   
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>
