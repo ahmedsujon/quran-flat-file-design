@@ -6,10 +6,7 @@
             similique dolor veniam.</p>
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
             <a style="padding: 20px; width: 300px;" href="{{ route('database.search') }}"
-                class="btn btn-primary btn-lg px-4 gap-3">English Search</a> <span style="padding-top: 3%;"
-                class="justify-content-center">OR</span>
-            <a style="padding: 20px; width: 300px;" href="{{ route('database.search') }}"
-                class="btn btn-primary btn-lg px-4 gap-3">Arabic Search</a>
+                class="btn btn-primary btn-lg px-4 gap-3">Beginner Search</a>
         </div>
     </div>
 </div>

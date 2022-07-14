@@ -40,11 +40,11 @@
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words.."><span
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words"><span
                 style="padding-top: 12px;" class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words.."><span
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words"><span
                 style="padding-top: 12px;" class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words..">
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words">
             </div>
             <table id="myTable">
               <tr class="header">
@@ -64,11 +64,11 @@
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter nomalize arabic words.."><span
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter nomalize arabic words"><span
                 style="padding-top: 12px;" class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter nomalize arabic words.."><span
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter nomalize arabic words"><span
                 style="padding-top: 12px;" class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter nomalize arabic words..">
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter nomalize arabic words">
             </div>
             <table id="myTable">
               <tr class="header">
@@ -88,13 +88,13 @@
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
             tabindex="0">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter actual arabic words in quran.."><span style="padding-top: 12px;"
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+                placeholder="Enter actual arabic words in quran"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter actual arabic words in quran.."><span style="padding-top: 12px;"
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+                placeholder="Enter actual arabic words in quran"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran..">
+              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran">
             </div>
             <table id="myTable">
               <tr class="header">

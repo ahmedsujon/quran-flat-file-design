@@ -39,7 +39,7 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root word..">
+            <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root word">
             <table id="myTable">
               <tr class="header">
                 <th>Surah Number</th>
@@ -65,7 +65,7 @@
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter normailzed arabic words..">
+            <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter normailzed arabic words">
             <table id="myTable">
               <tr class="header">
                 <th>Surah Number</th>
@@ -90,7 +90,7 @@
           </div>
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran..">
+            <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter actual arabic words in quran">
             <table id="myTable">
               <tr class="header">
                 <th>Surah Number Key</th>
