@@ -33,7 +33,6 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter root word..">
             <table id="myTable">
               <tr class="header">
                 <th>Sura Number</th>
@@ -55,7 +54,6 @@
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter normailzed arabic word..">
             <table id="myTable">
               <tr class="header">
                 <th>Sura Number</th>
