@@ -21,18 +21,15 @@
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-              type="button" role="tab" aria-controls="pills-home" aria-selected="true">Processing Logic for Function
-              6.1</button>
+              type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search by Single English Word/Subject</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-              type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Processing Logic for Function
-              6.2</button>
+              type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Search by Multiple English Word/Subject</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-              type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Processing Logic for Function
-              6.3</button>
+              type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Search by Multiple English Word/Subject</button>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
