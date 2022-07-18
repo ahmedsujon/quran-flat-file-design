@@ -36,4 +36,8 @@ Route::get('/ayat-word', AyatWordComponent::class)->name('ayat-word');
 Route::get('/hadith', HadithComponent::class)->name('hadith');
 Route::get('/sura-ayat', SurahAyatComponent::class)->name('sura-ayat');
 
+// CSV Import
+Route::get('ayaword/export/', [AyatWordComponent::class, 'export']);
+
+
 

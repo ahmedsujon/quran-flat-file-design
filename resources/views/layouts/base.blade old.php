@@ -23,9 +23,6 @@
 </head>
 
 <body id="body" class="dark-sidebar">
-
-    {{-- @livewire('admin.inc.sidebar')
-    @livewire('admin.inc.navbar') --}}
     <div class="page-wrapper">
         <!-- Page Content-->
         <div class="page-content-tab">
