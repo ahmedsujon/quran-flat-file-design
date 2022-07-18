@@ -18,14 +18,14 @@ class CreateAyatWordsTable extends Migration
             $table->string('unique_key');
             $table->string('surah_no');
             $table->string('ayat_no');
-            $table->string('arabic_root_word');
-            $table->string('normalize_word');
-            $table->string('Transliteration_word');
-            $table->string('english_word');
-            $table->string('word_sub_category');
-            $table->string('word_sub_category_description');
-            $table->string('inference_flag');
-            $table->string('hadith_reference');
+            $table->longText('arabic_root_word');
+            $table->longText('normalize_word');
+            $table->longText('Transliteration_word');
+            $table->longText('english_word');
+            $table->longText('word_sub_category');
+            $table->longText('word_sub_category_description');
+            $table->longText('inference_flag');
+            $table->longText('hadith_reference');
             
             $table->timestamps();
         });
