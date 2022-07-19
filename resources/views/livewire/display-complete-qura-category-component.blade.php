@@ -14,29 +14,31 @@
       Search List
     </a>
   </div>
-  <div style="padding-left: 50px; padding-right: 50px;" class="row">
+  <div style="padding-left: 20px; padding-right: 20px;" class="row">
     <div style="padding-left: 20px;" class="card">
       <div class="card-body">
-        <table id="myTable">
-          <tr class="header">
-            <th>Sura Number</th>
-            <th>Ayat Number </th>
-            <th>English-Word-Subsubject-Subcategory</th>
-            <th>English-Word-Subject-Category</th>
-            <th>Sura Ayat English Description</th>
-            <th>Hadith Description</th>
-          </tr>
-          @foreach ($display_complete_quran_category as $ayat_word)
-          <tr>
-            <td>{{ $ayat_word->surah_no }}</td>
-            <td>{{ $ayat_word->ayat_no }}</td>
-            <td>{{ $ayat_word->arabic_root_word }}</td>
-            <td>{{ $ayat_word->arabic_root_word }}</td>
-            <td>{{ $ayat_word->arabic_root_word }}</td>
-            <td>{{ $ayat_word->arabic_root_word }}</td>
-          </tr>
-          @endforeach
-        </table>
+        <div style="overflow-x:auto;">
+          <table id="myTable">
+            <tr class="header">
+              <th>Sura Number</th>
+              <th>Ayat Number </th>
+              <th>English-Word-Subsubject-Subcategory</th>
+              <th>English-Word-Subject-Category</th>
+              <th>Sura Ayat English Description</th>
+              <th>Hadith Description</th>
+            </tr>
+            @foreach ($display_complete_quran_category as $ayat_word)
+            <tr>
+              <td>{{ $ayat_word->surah_no }}</td>
+              <td>{{ $ayat_word->ayat_no }}</td>
+              <td>{{ $ayat_word->arabic_root_word }}</td>
+              <td>{{ $ayat_word->arabic_root_word }}</td>
+              <td>{{ $ayat_word->arabic_root_word }}</td>
+              <td>{{ $ayat_word->arabic_root_word }}</td>
+            </tr>
+            @endforeach
+          </table>
+        </div>
       </div>
     </div>
   </div>

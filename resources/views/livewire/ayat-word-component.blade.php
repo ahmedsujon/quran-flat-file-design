@@ -8,30 +8,32 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table" id="datatable_1">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>Surah No.</th>
-                                        <th>Ayat No.</th>
-                                        <th>Arabic Root Word</th>
-                                        <th>Normalized Arabic Word</th>
-                                        <th>Transliteration Word </th>
-                                        <th>English Word</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($ayat_words as $ayat_word)
-                                    <tr>
-                                        <td>{{ $ayat_word->surah_no }}</td>
-                                        <td>{{ $ayat_word->ayat_no }}</td>
-                                        <td>{{ $ayat_word->arabic_root_word }}</td>
-                                        <td>{{ $ayat_word->normalize_word }}</td>
-                                        <td>{{ $ayat_word->Transliteration_word }}</td>
-                                        <td>{{ $ayat_word->english_word }}</td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                            <div style="overflow-x:auto;">
+                                <table class="table" id="datatable_1">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Surah No.</th>
+                                            <th>Ayat No.</th>
+                                            <th>Arabic Root Word</th>
+                                            <th>Normalized Arabic Word</th>
+                                            <th>Transliteration Word </th>
+                                            <th>English Word</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($ayat_words as $ayat_word)
+                                        <tr>
+                                            <td>{{ $ayat_word->surah_no }}</td>
+                                            <td>{{ $ayat_word->ayat_no }}</td>
+                                            <td>{{ $ayat_word->arabic_root_word }}</td>
+                                            <td>{{ $ayat_word->normalize_word }}</td>
+                                            <td>{{ $ayat_word->Transliteration_word }}</td>
+                                            <td>{{ $ayat_word->english_word }}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
