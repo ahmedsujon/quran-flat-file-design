@@ -15,17 +15,32 @@ class AyatWordImport implements ToModel, WithHeadingRow
     */
     public function model(array $row)
     {
-        return new AyatWord([
-            'unique_key'                    => $row['unique_key'],
-            'surah_no'                      => $row['surah_no'],
-            'ayat_no'                       => $row['ayat_no'],
-            'arabic_root_word'              => $row['arabic_root_word'],
-            'normalize_word'                => $row['normalize_word'],
-            'Transliteration_word'          => $row['Transliteration_word'],
-            'english_word'                  => $row['english_word'],
-            'word_sub_category'             => $row['word_sub_category'],
-            'word_sub_category_description' => $row['word_sub_category_description'],
-            'hadith_reference'              => $row['hadith_reference'],
-        ]);
+        // return new AyatWord([
+        //     'unique_key'                    => $row['unique_key'],
+        //     'surah_no'                      => $row['surah_no'],
+        //     'ayat_no'                       => $row['ayat_no'],
+        //     'arabic_root_word'              => $row['arabic_root_word'],
+        //     'normalize_word'                => $row['normalize_word'],
+        //     'transliteration_word'          => $row['transliteration_word'],
+        //     'english_word'                  => $row['english_word'],
+        //     'word_sub_category'             => $row['word_sub_category'],
+        //     'word_sub_category_description' => $row['word_sub_category_description'],
+        //     'inference_flag'                => $row['inference_flag'],
+        //     'hadith_reference'              => $row['hadith_reference'],
+        // ]);
+
+         $ayatimport = new AyatWord();
+            $ayatimport->unique_key  = $row['unique_key'];
+            $ayatimport->surah_no  = $row['surah_no'];
+            $ayatimport->ayat_no = $row['ayat_no'];
+            $ayatimport->arabic_root_word =$row['arabic_root_word'];
+            $ayatimport->normalize_word  = $row['normalize_word'];
+            $ayatimport->transliteration_word = $row['transliteration_word'];
+            $ayatimport->english_word   = $row['english_word'];
+            $ayatimport->word_sub_category  =$row['word_sub_category'];
+            $ayatimport->word_sub_category_description =$row['word_sub_category_description'];
+            $ayatimport->inference_flag     =$row['inference_flag'];
+            $ayatimport->hadith_reference    = $row['hadith_reference'];
+            $ayatimport->save();
     }
 }

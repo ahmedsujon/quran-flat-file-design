@@ -5,25 +5,13 @@ namespace App\Http\Livewire;
 use App\Imports\AyatWordImport;
 use App\Models\AyatWord;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Maatwebsite\Excel\Facades\Excel;
 
 class AyatWordComponent extends Component
 {
     public $sortingValue = 10, $searchTerm;
-
-
-
-
-    public function uploadExcel()
-    {
-        $this->validate([
-            'excel'=>'required',
-        ]);
-
-        Excel::import(new AyatWordImport, $this->excel);
-        $this->excel = '';
-        return "Record Uploaded Successfuly!";
-    }
+    
 
 
 

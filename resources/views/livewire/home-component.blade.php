@@ -11,4 +11,14 @@
             </div>
         </div>
     </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 style="padding-top: 100px;" class="display-5 fw-bold">Quran Database Search</h1>
+        <div class="col-lg-6 mx-auto">
+            <form wire:submit.prevent='uploadExcel'>
+                <label for="img">Select image:</label>
+                <input type="file" wire:model='excel'>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
