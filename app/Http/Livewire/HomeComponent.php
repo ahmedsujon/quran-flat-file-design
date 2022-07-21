@@ -28,26 +28,26 @@ class HomeComponent extends Component
     // }
 
     //Sura Import
-    public function uploaSuradExcel()
-    {
-        $this->validate([
-            'excel'=>'required',
-        ]);
-        Excel::import(new SuraImport, $this->excel);
-        $this->excel = '';
-        return "Record Uploaded Successfuly!";
-    }
-    
-    // Hadith Import
-    // public function uploadHadithExcel()
+    // public function uploaSuradExcel()
     // {
     //     $this->validate([
     //         'excel'=>'required',
     //     ]);
-    //     Excel::import(new HadithImport, $this->excel);
+    //     Excel::import(new SuraImport, $this->excel);
     //     $this->excel = '';
     //     return "Record Uploaded Successfuly!";
     // }
+    
+    // Hadith Import
+    public function uploadHadithExcel()
+    {
+        $this->validate([
+            'excel'=>'required',
+        ]);
+        Excel::import(new HadithImport, $this->excel);
+        $this->excel = '';
+        return "Record Uploaded Successfuly!";
+    }
 
     public function render()
     {
