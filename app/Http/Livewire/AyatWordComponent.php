@@ -11,9 +11,6 @@ class AyatWordComponent extends Component
 {
     public $sortingValue = 10, $searchTerm;
 
-
-
-
     public function uploadExcel()
     {
         $this->validate([
@@ -24,8 +21,6 @@ class AyatWordComponent extends Component
         $this->excel = '';
         return "Record Uploaded Successfuly!";
     }
-
-
 
     public function render()
     {
