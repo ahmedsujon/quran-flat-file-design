@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="px-4 py-5 my-5 text-center">
+    <div class="px-4 py-5 my-5 text-center">
         <h4 style="padding-top: 100px;" class="display-5 fw-bold">Quran Database Search</h4>
         <div class="col-lg-6 mx-auto">
             <form wire:submit.prevent='uploadExcel'>
@@ -20,7 +20,7 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </div> --}}
+    </div>
     {{-- <div class="px-4 py-5 my-5 text-center">
         <h4 style="padding-top: 100px;" class="display-5 fw-bold">Quran Database Search</h4>
         <div class="col-lg-6 mx-auto">
@@ -31,7 +31,7 @@
             </form>
         </div>
     </div> --}}
-    <div class="px-4 py-5 my-5 text-center">
+    {{-- <div class="px-4 py-5 my-5 text-center">
         <h4 style="padding-top: 100px;" class="display-5 fw-bold">Quran Database Search</h4>
         <div class="col-lg-6 mx-auto">
             <form wire:submit.prevent='uploadHadithExcel'>
@@ -40,5 +40,5 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </div>
+    </div> --}}
 </div>
