@@ -15,8 +15,8 @@ class CreateHadithsTable extends Migration
     {
         Schema::create('hadiths', function (Blueprint $table) {
             $table->id();
-            $table->longText('hadith_referance');
-            $table->longText('hadith_description');
+            $table->longText('hadith_referance')->nullable();
+            $table->longText('hadith_description')->nullable();
             $table->timestamps();
         });
     }

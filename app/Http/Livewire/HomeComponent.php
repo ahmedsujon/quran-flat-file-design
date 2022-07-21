@@ -3,7 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Imports\AyatWordImport;
-use App\Models\AyatWord;
+use App\Imports\HadithImport;
+use App\Imports\SuraImport;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Maatwebsite\Excel\Facades\Excel;
@@ -15,16 +16,38 @@ class HomeComponent extends Component
     public $excel;
     use WithFileUploads;
 
-    public function uploadExcel()
+    // Ayat Import
+    // public function uploadExcel()
+    // {
+    //     $this->validate([
+    //         'excel'=>'required',
+    //     ]);
+    //     Excel::import(new AyatWordImport, $this->excel);
+    //     $this->excel = '';
+    //     return "Record Uploaded Successfuly!";
+    // }
+
+    //Sura Import
+    public function uploaSuradExcel()
     {
         $this->validate([
             'excel'=>'required',
         ]);
-
-        Excel::import(new AyatWordImport, $this->excel);
+        Excel::import(new SuraImport, $this->excel);
         $this->excel = '';
         return "Record Uploaded Successfuly!";
     }
+    
+    // Hadith Import
+    // public function uploadHadithExcel()
+    // {
+    //     $this->validate([
+    //         'excel'=>'required',
+    //     ]);
+    //     Excel::import(new HadithImport, $this->excel);
+    //     $this->excel = '';
+    //     return "Record Uploaded Successfuly!";
+    // }
 
     public function render()
     {

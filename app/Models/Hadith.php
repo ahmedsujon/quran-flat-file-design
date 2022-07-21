@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Hadith extends Model
 {
     use HasFactory;
-    protected $table = 'hadiths';
+
+    protected $filable = ['hadith_referance', 'hadith_description'];
 }

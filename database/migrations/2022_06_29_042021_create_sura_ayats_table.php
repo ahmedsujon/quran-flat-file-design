@@ -15,17 +15,17 @@ class CreateSuraAyatsTable extends Migration
     {
         Schema::create('sura_ayats', function (Blueprint $table) {
             $table->id();
-            $table->string('surah_number');
-            $table->string('ayat_number');
-            $table->longText('ayat_english_description');
-            $table->longText('ayat_arabic_description');
-            $table->longText('relavant_ayat');
-            $table->string('surah_name');
-            $table->longText('arabic_root_word');
-            $table->longText('normalized_arabic_word');
-            $table->longText('translitaration_word');
-            $table->longText('english_word_subject');
-            $table->longText('english_word_sub_subject');
+            $table->string('surah_number')->nullable();
+            $table->string('ayat_number')->nullable();
+            $table->longText('ayat_english_description')->nullable();
+            $table->longText('ayat_arabic_description')->nullable();
+            $table->longText('relavant_ayat')->nullable();
+            $table->string('surah_name')->nullable();
+            $table->longText('arabic_root_word')->nullable();
+            $table->longText('normalized_arabic_word')->nullable();
+            $table->longText('translitaration_word')->nullable();
+            $table->longText('english_word_subject')->nullable();
+            $table->longText('english_word_sub_subject')->nullable();
             $table->timestamps();
         });
     }
