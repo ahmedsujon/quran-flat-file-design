@@ -4,7 +4,7 @@
 </style>
 @endpush
 <div>
-  <div class="my-5 text-center">
+  <div class="my-3 text-center">
     <h4 style="padding-bottom: 20px; padding-top: 20px; font-size:35px;" class="display-5 fw-bold">Quran
       Search Using English Word/Subject</h4>
     <a href="{{ route('website') }}" type="button" class="btn btn-primary">
@@ -43,7 +43,8 @@
               <table id="myTable">
                 <tr class="header">
                   <th>Sura-Ayat</th>
-                  <th>English-Word-Subject-Category</th>
+                  <th>English Word Subject Category</th>
+                  <th>English Word Subject Sub-Category</th>
                   <th>Inference Flag</th>
                   <th>Sura Ayat English Description</th>
                   <th>Hadith Description</th>
@@ -51,6 +52,7 @@
                 @foreach ($search_using_english_word as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
+                  <td>{{ $ayat_word->word_sub_category }}</td>
                   <td>{{ $ayat_word->word_sub_category }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
@@ -65,10 +67,13 @@
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
               <input type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
-                class="justify-content-center">AND</span>
+                class="justify-content-center">OR</span>
               <input type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
-                class="justify-content-center">AND</span>
+                class="justify-content-center">OR</span>
+                <input type="text" id="myInput" onkeyup="myFunction()"
+                placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
+                class="justify-content-center">OR</span>
               <input type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject..">
             </div>

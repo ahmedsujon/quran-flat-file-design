@@ -4,7 +4,7 @@
 </style>
 @endpush
 <div>
-  <div class="my-5 text-center">
+  <div class="my-3 text-center">
     <h4 class="display-5 fw-bold">Quran Single
       Word
       Search</h4>
@@ -79,7 +79,7 @@
                 </tr>
                 @foreach ($ayat_words as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
+                  <td>{{ $ayat_word->surah_no }} : {{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>

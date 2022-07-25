@@ -4,7 +4,7 @@
 </style>
 @endpush
 <div>
-  <div class="my-5 text-center">
+  <div class="my-3 text-center">
     <h4 style="padding-bottom: 20px; padding-top: 20px; font-size:35px;" class="display-5 fw-bold">Display
       Complete Quran Sorted By English Sub-Category</h4>
     <a href="{{ route('website') }}" type="button" class="btn btn-primary">
