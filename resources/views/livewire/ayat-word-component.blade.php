@@ -12,7 +12,7 @@
                                 <table class="table" id="datatable_1">
                                     <thead class="thead-light">
                                         <tr>
-                                            <th>Surah No.</th>
+                                            <th>Surah-Ayat</th>
                                             <th>Ayat No.</th>
                                             <th>Arabic Root Word</th>
                                             <th>Normalized Arabic Word</th>
@@ -23,8 +23,7 @@
                                     <tbody>
                                         @foreach ($ayat_words as $ayat_word)
                                         <tr>
-                                            <td>{{ $ayat_word->surah_no }}</td>
-                                            <td>{{ $ayat_word->ayat_no }}</td>
+                                            <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                                             <td>{{ $ayat_word->arabic_root_word }}</td>
                                             <td>{{ $ayat_word->normalize_word }}</td>
                                             <td>{{ $ayat_word->Transliteration_word }}</td>

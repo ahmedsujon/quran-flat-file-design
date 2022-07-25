@@ -4,7 +4,7 @@
 </style>
 @endpush
 <div>
-  <div class="px-4 py-5 my-5 text-center">
+  <div class="my-5 text-center">
     <h4 style="padding-bottom: 20px; padding-top: 20px; font-size:35px;" class="display-5 fw-bold">Select One From
       Folling Searches</h4>
     <a href="{{ route('website') }}" type="button" class="btn btn-primary">
@@ -32,8 +32,7 @@
         <div style="overflow-x:auto;">
           <table id="myTable">
             <tr class="header">
-              <th>Sura Number</th>
-              <th>Ayat Number </th>
+              <th>Sura-Ayat</th>
               <th>English-Word-Subject-Category</th>
               <th>English-Word-Subsubject-Subcategory</th>
               <th>Sura Ayat English Description</th>
@@ -41,8 +40,7 @@
             </tr>
             @foreach ($search_dropdowns as $ayat_word)
             <tr>
-              <td>{{ $ayat_word->surah_no }}</td>
-              <td>{{ $ayat_word->ayat_no }}</td>
+              <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
               <td>{{ $ayat_word->word_sub_category }}</td>
               <td>{{ $ayat_word->arabic_root_word }}</td>
               <td>{{ $ayat_word->arabic_root_word }}</td>

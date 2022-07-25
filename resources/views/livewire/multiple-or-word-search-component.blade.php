@@ -4,7 +4,7 @@
 </style>
 @endpush
 <div>
-  <div class="px-4 py-5 my-5 text-center">
+  <div class="my-5 text-center">
     <h4 style="padding-bottom: 20px; padding-top: 20px; font-size:35px;" class="display-5 fw-bold">Quran Multiple
       Word (AND)
       Search</h4>
@@ -44,9 +44,7 @@
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
               <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter arabic root words"><span style="padding-top: 12px;"
-                class="justify-content-center">AND</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words">
+                placeholder="Enter arabic root words">
             </div>
             <div style="overflow-x:auto;">
               <table id="myTable">

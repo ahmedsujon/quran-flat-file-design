@@ -4,7 +4,7 @@
 </style>
 @endpush
 <div>
-  <div class="px-4 py-5 my-5 text-center">
+  <div class="my-5 text-center">
     <h4 style="padding-bottom: 20px; padding-top: 20px; font-size:35px;" class="display-5 fw-bold">Display Quran
       In Arabic</h4>
     <a href="{{ route('website') }}" type="button" class="btn btn-primary">
@@ -36,16 +36,14 @@
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
-                  <th>Sura Number</th>
-                  <th>Ayat Number in Surah </th>
+                  <th>Sura-Ayat</th>
                   <th>Arabic Root Word</th>
                   <th>Normalized Arabic Word</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
                 @foreach ($display_quran_arabic as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}</td>
-                  <td>{{ $ayat_word->ayat_no }}</td>
+                  <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
@@ -59,16 +57,14 @@
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
-                  <th>Sura Number</th>
-                  <th>Ayat Number in Surah</th>
+                  <th>Sura-Ayat</th>
                   <th>Normalized Arabic Word</th>
                   <th>Arabic Root Word</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
                 @foreach ($display_quran_arabic as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}</td>
-                  <td>{{ $ayat_word->ayat_no }}</td>
+                  <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>

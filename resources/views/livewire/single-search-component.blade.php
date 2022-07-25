@@ -4,8 +4,8 @@
 </style>
 @endpush
 <div>
-  <div class="px-4 py-5 my-5 text-center">
-    <h4 style="padding-bottom: 20px; padding-top: 20px; font-size:35px;" class="display-5 fw-bold">Quran Single
+  <div class="my-5 text-center">
+    <h4 class="display-5 fw-bold">Quran Single
       Word
       Search</h4>
     <a href="{{ route('website') }}" type="button" class="btn btn-primary">
@@ -17,7 +17,7 @@
   </div>
 
   <div style="padding-left: 20px; padding-right: 20px;" class="row">
-    <div style="padding-left: 20px;" class="card">
+    <div class="card">
       <div class="card-body">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
@@ -43,8 +43,7 @@
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
-                  <th>Surah Number</th>
-                  <th>Ayat Number in Surah</th>
+                  <th>Surah-Ayat</th>
                   <th>Arabic Root Word</th>
                   <th>Normalize Arabic Word</th>
                   <th>Inference Flag</th>
@@ -53,8 +52,7 @@
                 </tr>
                 @foreach ($ayat_words as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}</td>
-                  <td>{{ $ayat_word->ayat_no }}</td>
+                  <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
@@ -72,8 +70,7 @@
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
-                  <th>Surah Number</th>
-                  <th>Ayat Number in Surah</th>
+                  <th>Surah-Ayat</th>
                   <th>Normalize Arabic Word</th>
                   <th>Arabic Root Word</th>
                   <th>Inference Flag</th>
@@ -82,8 +79,7 @@
                 </tr>
                 @foreach ($ayat_words as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}</td>
-                  <td>{{ $ayat_word->ayat_no }}</td>
+                  <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
