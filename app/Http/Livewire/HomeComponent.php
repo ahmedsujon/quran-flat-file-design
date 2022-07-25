@@ -17,15 +17,15 @@ class HomeComponent extends Component
     use WithFileUploads;
 
     // Ayat Import
-    public function uploadExcel()
-    {
-        $this->validate([
-            'excel'=>'required',
-        ]);
-        Excel::import(new AyatWordImport, $this->excel);
-        $this->excel = '';
-        return "Record Uploaded Successfuly!";
-    }
+    // public function uploadExcel()
+    // {
+    //     $this->validate([
+    //         'excel'=>'required',
+    //     ]);
+    //     Excel::import(new AyatWordImport, $this->excel);
+    //     $this->excel = '';
+    //     return "Record Uploaded Successfuly!";
+    // }
 
     //Sura Import
     // public function uploaSuradExcel()

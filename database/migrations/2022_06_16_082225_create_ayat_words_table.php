@@ -25,7 +25,7 @@ class CreateAyatWordsTable extends Migration
             $table->longText('word_sub_category')->nullable();
             $table->longText('word_sub_category_description')->nullable();
             $table->longText('inference_flag')->nullable();
-            $table->longText('hadith_reference')->nullable();
+            $table->string('hadith_reference')->nullable();
             
             $table->timestamps();
         });

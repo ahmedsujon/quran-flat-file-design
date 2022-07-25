@@ -22,4 +22,8 @@ class AyatWord extends Model
         'inference_flag',
         'hadith_reference'
     ];
+
+    public function hadithData(){
+        return $this->belongsTo(Hadith::class, 'hadith_reference');
+    }
 }

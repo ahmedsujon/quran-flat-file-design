@@ -9,5 +9,5 @@ class Hadith extends Model
 {
     use HasFactory;
 
-    protected $filable = ['hadith_referance', 'hadith_description'];
+    protected $fillable = ['hadith_referance', 'hadith_description'];
 }

@@ -4,8 +4,9 @@ namespace App\Imports;
 
 use App\Models\Hadith;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class HadithImport implements ToModel
+class HadithImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row

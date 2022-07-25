@@ -39,7 +39,12 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
-            <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root word">
+
+
+            <input dir="rtl" wire:model="singleArabicRootWord" type="text" id="myInput" onkeyup="myFunction()"
+              placeholder="Enter arabic root word">
+
+
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
@@ -56,8 +61,15 @@
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
-                  <td>{{ $ayat_word->Transliteration_word }}</td>
-                  <td>{{ $ayat_word->Transliteration_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_arabic_description }}</td>
+
+                  <td>
+                    @if (is_null($ayat_word->hadith_reference))
+                    
+                    @else
+                    {{ $ayat_word->hadithData }}
+                    @endif
+                  </td>
                 </tr>
                 @endforeach
               </table>
