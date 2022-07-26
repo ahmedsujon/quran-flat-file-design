@@ -40,7 +40,7 @@
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+              <input dir="rtl" wire:model="multipleOrWordSearch" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
               <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
@@ -53,15 +53,26 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
+                @php
+                $sl = ($multiple_or_words_search->perPage() *
+                $multiple_or_words_search->currentPage())-($multiple_or_words_search->perPage() - 1)
+                @endphp
+                @if ($multiple_or_words_search->count() > 0)
                 @foreach ($multiple_or_words_search as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}</td>
                   <td>{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_arabic_description }}</td>
                 </tr>
                 @endforeach
+                @else
+                <tr>
+                  <td colspan="5" style="text-align: center;">No data available!</td>
+                </tr>
+                @endif
               </table>
             </div>
+            {{ $multiple_or_words_search->links('pagination-links-table') }}
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">

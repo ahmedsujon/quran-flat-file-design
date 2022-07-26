@@ -8,13 +8,3 @@ function suraAyatData($surah_number, $ayat_number){
     return $data;
 }
 
-// function hadithData($hadith_referance){
-
-//     if ($hadith_referance != '0'){
-//         $data = Hadith::where('hadith_referance', $hadith_referance)->first()->hadith_description;
-//     }else{
-//         $data = '';
-//     }
-
-//     return $hadith_referance;
-// }

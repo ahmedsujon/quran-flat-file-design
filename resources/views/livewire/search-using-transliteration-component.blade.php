@@ -38,7 +38,7 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter single transliteration word..">
+            <input type="text" wire:model="searchUsingTransliteration" id="myInput" onkeyup="myFunction()" placeholder="Enter single transliteration word..">
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
@@ -49,18 +49,33 @@
                   <th>Sura Ayat English Description </th>
                   <th>Hadith Description</th>
                 </tr>
+                @php
+                $sl = ($search_using_translitaration->perPage() *
+                $search_using_translitaration->currentPage())-($search_using_translitaration->perPage() - 1)
+                @endphp
+                @if ($search_using_translitaration->count() > 0)
                 @foreach ($search_using_translitaration as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->Transliteration_word }}</td>
+                  <td>{{ $ayat_word->transliteration_word }}</td>
                   <td>{{ $ayat_word->word_sub_category }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
+                  <td>
+                    @if (isset($ayat_word->hadithData->hadith_description))
+                    {{ $ayat_word->hadithData->hadith_description }}
+                    @endif
+                  </td>
                 </tr>
                 @endforeach
+                @else
+                <tr>
+                  <td colspan="5" style="text-align: center;">No data available!</td>
+                </tr>
+                @endif
               </table>
             </div>
+            {{ $search_using_translitaration->links('pagination-links-table') }}
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">

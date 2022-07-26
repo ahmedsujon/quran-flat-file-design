@@ -14,7 +14,6 @@
       Search List
     </a>
   </div>
-
   <div style="padding-left: 20px; padding-right: 20px;" class="row">
     <div style="padding-left: 20px;" class="card">
       <div class="card-body">
@@ -41,16 +40,27 @@
                   <th>Normalized Arabic Word</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
+                @php
+                $sl = ($display_quran_arabic->perPage() *
+                $display_quran_arabic->currentPage())-($display_quran_arabic->perPage() - 1)
+                @endphp
+                @if ($display_quran_arabic->count() > 0)
                 @foreach ($display_quran_arabic as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_arabic_description }}</td>
                 </tr>
                 @endforeach
+                @else
+                <tr>
+                  <td colspan="5" style="text-align: center;">No data available!</td>
+                </tr>
+                @endif
               </table>
             </div>
+            {{ $display_quran_arabic->links('pagination-links-table') }}
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">

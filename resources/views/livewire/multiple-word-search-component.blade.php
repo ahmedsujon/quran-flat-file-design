@@ -59,7 +59,8 @@
                   <th>Hadith Description</th>
                 </tr>
                 @php
-                $sl = ($multiple_words_search->perPage() * $multiple_words_search->currentPage())-($multiple_words_search->perPage() - 1)
+                $sl = ($multiple_words_search->perPage() *
+                $multiple_words_search->currentPage())-($multiple_words_search->perPage() - 1)
                 @endphp
                 @if ($multiple_words_search->count() > 0)
                 @foreach ($multiple_words_search as $multipleword)
@@ -68,8 +69,12 @@
                   <td>{{ $multipleword->arabic_root_word }}</td>
                   <td>{{ $multipleword->normalize_word }}</td>
                   <td>{{ $multipleword->inference_flag }}</td>
-                  <td>{{ $multipleword->arabic_root_word }}</td>
-                  <td>{{ $multipleword->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($multipleword->surah_no,$multipleword->ayat_no)->ayat_arabic_description }}</td>
+                  <td>
+                    @if (isset($multipleword->hadithData->hadith_description))
+                    {{ $multipleword->hadithData->hadith_description }}
+                    @endif
+                  </td>
                 </tr>
                 @endforeach
                 @else
