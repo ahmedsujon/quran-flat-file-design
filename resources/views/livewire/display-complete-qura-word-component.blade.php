@@ -22,22 +22,37 @@
           <table id="myTable">
             <tr class="header">
               <th>Sura-Ayat</th>
-              <th>English-Word-Subject-Category</th>
-              <th>English-Word-Subsubject-Subcategory</th>
+              <th>English Word Subject</th>
+              <th>English Word Sub-Subject</th>
               <th>Sura Ayat English Description</th>
               <th>Hadith Description</th>
             </tr>
+            @php
+            $sl = ($display_complete_quran_word->perPage() *
+            $display_complete_quran_word->currentPage())-($display_complete_quran_word->perPage() - 1)
+            @endphp
+            @if ($display_complete_quran_word->count() > 0)
             @foreach ($display_complete_quran_word as $ayat_word)
             <tr>
               <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
+              <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->english_word_subject }}</td>
+              <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->english_word_sub_subject }}</td>
+              <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
+              <td>
+                @if (isset($ayat_word->hadithData->hadith_description))
+                {{ $ayat_word->hadithData->hadith_description }}
+                @endif
+              </td>
             </tr>
             @endforeach
+            @else
+            <tr>
+              <td colspan="5" style="text-align: center;">No data available!</td>
+            </tr>
+            @endif
           </table>
         </div>
+        {{ $display_complete_quran_word->links('pagination-links-table') }}
       </div>
     </div>
   </div>
