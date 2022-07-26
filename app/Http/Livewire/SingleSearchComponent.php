@@ -12,8 +12,8 @@ class SingleSearchComponent extends Component
 
     public function render()
     {
-        $ayat_words = AyatWord::where('arabic_root_word', 'like', '%'.$this->singleArabicRootWord.'%')->get();
-
+        $ayat_words = AyatWord::where('arabic_root_word', 'like', '%'.$this->singleArabicRootWord.'%')->paginate($this->sortingValue);
+        
         // $ayat_words = AyatWord::get();
         return view('livewire.single-search-component', ['ayat_words'=>$ayat_words])->layout('layouts.base');
     }

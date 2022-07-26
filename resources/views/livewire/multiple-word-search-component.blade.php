@@ -40,7 +40,7 @@
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+              <input dir="rtl" wire:model="multipleWordSearch" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
               <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
@@ -58,18 +58,28 @@
                   <th>Sura Ayat Arabic Description</th>
                   <th>Hadith Description</th>
                 </tr>
-                @foreach ($multiple_words_search as $ayat_word)
+                @php
+                $sl = ($multiple_words_search->perPage() * $multiple_words_search->currentPage())-($multiple_words_search->perPage() - 1)
+                @endphp
+                @if ($multiple_words_search->count() > 0)
+                @foreach ($multiple_words_search as $multipleword)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
-                  <td>{{ $ayat_word->normalize_word }}</td>
-                  <td>{{ $ayat_word->inference_flag }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ $multipleword->surah_no }}:{{ $multipleword->ayat_no }}</td>
+                  <td>{{ $multipleword->arabic_root_word }}</td>
+                  <td>{{ $multipleword->normalize_word }}</td>
+                  <td>{{ $multipleword->inference_flag }}</td>
+                  <td>{{ $multipleword->arabic_root_word }}</td>
+                  <td>{{ $multipleword->arabic_root_word }}</td>
                 </tr>
                 @endforeach
+                @else
+                <tr>
+                  <td colspan="5" style="text-align: center;">No data available!</td>
+                </tr>
+                @endif
               </table>
             </div>
+            {{ $multiple_words_search->links('pagination-links-table') }}
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
             tabindex="0">
