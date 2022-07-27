@@ -43,10 +43,10 @@
               <input dir="rtl" wire:model="multipleWordSearch" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+              <input dir="rtl" wire:model="multipleWordSearchTwo"  type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words">
+              <input dir="rtl" wire:model="multipleWordSearchThree" type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter arabic root words">
             </div>
             <div style="overflow-x:auto;">
               <table id="myTable">
