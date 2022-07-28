@@ -113,7 +113,7 @@
             {{ $ayat_wordstabtwo->links('pagination-links-table') }}
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabThree') show active @endif">
-            <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+            <input dir="rtl" wire:model="singleArabicRootWordSecenttabThree" type="text" id="myInput" onkeyup="myFunction()"
               placeholder="Enter actual arabic words in quran">
             <div style="overflow-x:auto;">
               <table id="myTable">
@@ -122,15 +122,25 @@
                   <th>Ayat Number in Surah</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
-                @foreach ($ayat_words as $ayat_word)
+                @php
+                $sl = ($ayat_wordstabthree->perPage() * $ayat_wordstabthree->currentPage())-($ayat_wordstabthree->perPage() - 1)
+                @endphp
+                @if ($ayat_wordstabthree->count() > 0)
+                @foreach ($ayat_wordstabthree as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}</td>
                   <td>{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                 </tr>
                 @endforeach
+                @else
+                <tr>
+                  <td colspan="5" style="text-align: center;">No data available!</td>
+                </tr>
+                @endif
               </table>
             </div>
+            {{ $ayat_wordstabthree->links('pagination-links-table') }}
           </div>
         </div>
       </div>
