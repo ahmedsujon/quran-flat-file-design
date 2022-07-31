@@ -25,10 +25,9 @@ class MultipleWordSearchComponent extends Component
 
     public function render()
     {
-
         $multiple_words_search = AyatWord::where('arabic_root_word', 'like', '%' . $this->multipleWordSearch . '%')
-        ->where('arabic_root_word', 'like', '%' . $this->multipleWordSearch . '%')
-        ->where('arabic_root_word', 'like', '%' . $this->multipleWordSearch . '%');
+            ->orWhere('arabic_root_word', 'like', '%' . $this->multipleWordSearchTwo . '%')
+            ->orWhere('arabic_root_word', 'like', '%' . $this->multipleWordSearchThree . '%')->get();
 
 
         // $multiple_words_search_two = AyatWord::where('arabic_root_word', 'like', '%' . $this->multipleWordSearchTwo . '%')->get();
@@ -46,7 +45,7 @@ class MultipleWordSearchComponent extends Component
         // $multiple_words_search->merge($multiple_words_search_three);
 
         // dd($multiple_words_search);
-    
+
 
         return view(
             'livewire.multiple-word-search-component',
