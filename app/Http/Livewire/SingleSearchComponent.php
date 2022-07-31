@@ -25,8 +25,8 @@ class SingleSearchComponent extends Component
     public function render()
     {
         $ayat_words = AyatWord::where('arabic_root_word', 'like', '%' . $this->singleArabicRootWord . '%')->paginate($this->sortingValue);
-        $ayat_wordstabtwo = AyatWord::where('arabic_root_word', 'like', '%' . $this->singleArabicRootWordSecenttab . '%')->paginate($this->sortingValue);
-        $ayat_wordstabthree = AyatWord::where('arabic_root_word', 'like', '%' . $this->singleArabicRootWordSecenttabThree . '%')->paginate($this->sortingValue);
+        $ayat_wordstabtwo = AyatWord::where('normalize_word', 'like', '%' . $this->singleArabicRootWordSecenttab . '%')->paginate($this->sortingValue);
+        $ayat_wordstabthree = AyatWord::where('ayat_arabic_description', 'like', '%' . $this->singleArabicRootWordSecenttabThree . '%')->paginate($this->sortingValue);
         
         return view('livewire.single-search-component', ['ayat_words' => $ayat_words, 'ayat_wordstabtwo' => $ayat_wordstabtwo, 'ayat_wordstabthree'=>$ayat_wordstabthree])->layout('layouts.base');
     }

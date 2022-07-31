@@ -54,11 +54,6 @@
                   <th>Sura Ayat Arabic Description</th>
                   <th>Hadith Description</th>
                 </tr>
-                @php
-                $sl = ($multiple_words_search->perPage() *
-                $multiple_words_search->currentPage())-($multiple_words_search->perPage() - 1)
-                @endphp
-                @if ($multiple_words_search->count() > 0)
                 @foreach ($multiple_words_search as $multipleword)
                 <tr>
                   <td>{{ $multipleword->surah_no }}:{{ $multipleword->ayat_no }}</td>
@@ -73,16 +68,10 @@
                   </td>
                 </tr>
                 @endforeach
-                @else
-                <tr>
-                  <td colspan="5" style="text-align: center;">No data available!</td>
-                </tr>
-                @endif
               </table>
             </div>
-            {{ $multiple_words_search->links('pagination-links-table') }}
           </div>
-          <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
+          {{-- <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
               <input dir="rtl" wire:model="multipleWordSearchTabTwo" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter nomalize arabic words"><span style="padding-top: 12px;"
@@ -163,7 +152,7 @@
               </table>
             </div>
             {{ $multiple_words_search_tab_three->links('pagination-links-table') }}
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

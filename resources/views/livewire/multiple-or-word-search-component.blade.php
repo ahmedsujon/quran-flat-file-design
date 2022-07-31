@@ -39,10 +39,10 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade @if($tabStatus == 'tabOne') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input dir="rtl" wire:model="multipleOrWordSearch" type="text" id="myInput" onkeyup="myFunction()"
+              <input dir="rtl" wire:model="multipleOrWordSearchone" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
+              <input dir="rtl" wire:model="multipleOrWordSearchtwo" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words">
             </div>
             <div style="overflow-x:auto;">

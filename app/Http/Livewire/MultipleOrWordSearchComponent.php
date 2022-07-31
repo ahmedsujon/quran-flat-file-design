@@ -10,10 +10,11 @@ class MultipleOrWordSearchComponent extends Component
 {
     use WithPagination;
     public $sortingValue = 10, $searchTerm;
-    public $multipleOrWordSearch;
+    public $multipleOrWordSearchone, $multipleOrWordSearchtwo;
     public $multipleOrWordSearchTabTwo;
     public $multipleOrWordSearchTabThree;
     public $tabStatus = 'tabOne';
+    public $multipleOrWordSearch;
 
     public function tabchnage($value)
     {
@@ -22,8 +23,11 @@ class MultipleOrWordSearchComponent extends Component
 
     public function render()
     {
-        $multiple_or_words_search = AyatWord::where('arabic_root_word', 'like', '%'.$this->multipleOrWordSearch.'%')
+
+        $multiple_or_words_search = AyatWord::where('arabic_root_word', 'like', '%'.$this->multipleOrWordSearchone.'%')
+        ->where('arabic_root_word', 'like', '%'.$this->multipleOrWordSearchtwo.'%')
         ->paginate($this->sortingValue);
+        
 
         $multiple_or_words_search_tab_two = AyatWord::where('arabic_root_word', 'like', '%'.$this->multipleOrWordSearch.'%')
         ->paginate($this->sortingValue);
