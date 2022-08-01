@@ -11,9 +11,9 @@ class SearchUsingTransliterationComponent extends Component
     use WithPagination;
     public $sortingValue = 10, $searchTerm;
 
-    public $searchUsingTransliteration;
-    public $searchUsingTransliterationTabTwo;
-    public $searchUsingTransliterationTabThree;
+    public $searchUsingTransliterationOne;
+    public $searchUsingTransliterationTabTwoOne, $searchUsingTransliterationTabTwoTwo, $searchUsingTransliterationTabTwoThree;
+    public $searchUsingTransliterationTabThreeOne, $searchUsingTransliterationTabThreeTwo, $searchUsingTransliterationTabThreeThree;
 
     public $tabStatus = 'tabOne';
 

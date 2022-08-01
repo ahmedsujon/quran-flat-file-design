@@ -37,7 +37,7 @@
         </ul>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade @if($tabStatus == 'tabOne') show active @endif">
-            <input type="text" wire:model="searchUsingTransliteration" id="myInput" onkeyup="myFunction()" placeholder="Enter single transliteration word..">
+            <input type="text" wire:model="searchUsingTransliterationOne" id="myInput" onkeyup="myFunction()" placeholder="Enter single transliteration word..">
             <div style="overflow-x:auto;">
               <table id="myTable">
                 <tr class="header">
@@ -45,13 +45,9 @@
                   <th>Transliteration Word</th>
                   <th>English Word-Subject-Category</th>
                   <th>Inference Flag</th>
-                  <th>Sura Ayat English Description </th>
+                  <th>Sura Ayat English Description</th>
                   <th>Hadith Description</th>
                 </tr>
-                @php
-                $sl = ($search_using_translitaration->perPage() *
-                $search_using_translitaration->currentPage())-($search_using_translitaration->perPage() - 1)
-                @endphp
                 @if ($search_using_translitaration->count() > 0)
                 @foreach ($search_using_translitaration as $ayat_word)
                 <tr>
@@ -78,13 +74,13 @@
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingTransliterationTabTwoOne" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word.."><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingTransliterationTabTwoTwo" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word.."><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingTransliterationTabTwoThree" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word..">
             </div>
             <div style="overflow-x:auto;">
@@ -97,10 +93,6 @@
                   <th>Sura Ayat English Description</th>
                   <th>Hadith Description</th>
                 </tr>
-                @php
-                $sl = ($search_using_translitaration_tab_two->perPage() *
-                $search_using_translitaration_tab_two->currentPage())-($search_using_translitaration_tab_two->perPage() - 1)
-                @endphp
                 @if ($search_using_translitaration_tab_two->count() > 0)
                 @foreach ($search_using_translitaration_tab_two as $ayat_word)
                 <tr>
@@ -123,13 +115,13 @@
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabThree') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingTransliterationTabThreeOne" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word.."><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingTransliterationTabThreeTwo" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word.."><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingTransliterationTabThreeThree" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word..">
             </div>
             <div style="overflow-x:auto;">
@@ -139,10 +131,6 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat English Description </th>
                 </tr>
-                @php
-                $sl = ($search_using_translitaration_tab_three->perPage() *
-                $search_using_translitaration_tab_three->currentPage())-($search_using_translitaration_tab_three->perPage() - 1)
-                @endphp
                 @if ($search_using_translitaration_tab_three->count() > 0)
                 @foreach ($search_using_translitaration_tab_three as $ayat_word)
                 <tr>
