@@ -128,9 +128,9 @@
                 @if ($ayat_wordstabthree->count() > 0)
                 @foreach ($ayat_wordstabthree as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}</td>
-                  <td>{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ $ayat_word->surah_number }}</td>
+                  <td>{{ $ayat_word->ayat_number }}</td>
+                  <td>{{ $ayat_word->ayat_arabic_description }}</td>
                 </tr>
                 @endforeach
                 @else
