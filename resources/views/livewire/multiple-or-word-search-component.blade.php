@@ -21,25 +21,26 @@
       <div class="card-body">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button wire:click.prevent="tabchnage('tabOne')" class="nav-link @if($tabStatus == 'tabOne') active @endif" id="pills-home-tab" 
-              type="button">Search by Arabic Root
+            <button wire:click.prevent="tabchnage('tabOne')" class="nav-link @if($tabStatus == 'tabOne') active @endif"
+              id="pills-home-tab" type="button">Search by Arabic Root
               word</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button wire:click.prevent="tabchnage('tabTwo')" class="nav-link @if($tabStatus == 'tabTwo') active @endif" id="pills-profile-tab"
-              type="button">Search by Normalize Arabic
+            <button wire:click.prevent="tabchnage('tabTwo')" class="nav-link @if($tabStatus == 'tabTwo') active @endif"
+              id="pills-profile-tab" type="button">Search by Normalize Arabic
               Word</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button wire:click.prevent="tabchnage('tabThree')" class="nav-link @if($tabStatus == 'tabThree') active @endif" id="pills-contact-tab"
-              type="button">Search by Actual Arabic Words
+            <button wire:click.prevent="tabchnage('tabThree')"
+              class="nav-link @if($tabStatus == 'tabThree') active @endif" id="pills-contact-tab" type="button">Search
+              by Actual Arabic Words
               in Quran</button>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade @if($tabStatus == 'tabOne') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input dir="rtl" wire:model="multipleOrWordSearchone" type="text" id="myInput" onkeyup="myFunction()"
+              <input dir="rtl" wire:model="multipleOrWordSearchOne" type="text" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter arabic root words"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
               <input dir="rtl" wire:model="multipleOrWordSearchtwo" type="text" id="myInput" onkeyup="myFunction()"
@@ -52,10 +53,6 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
-                @php
-                $sl = ($multiple_or_words_search->perPage() *
-                $multiple_or_words_search->currentPage())-($multiple_or_words_search->perPage() - 1)
-                @endphp
                 @if ($multiple_or_words_search->count() > 0)
                 @foreach ($multiple_or_words_search as $ayat_word)
                 <tr>
@@ -75,14 +72,14 @@
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter nomalize arabic words"><span style="padding-top: 12px;"
+              <input dir="rtl" wire:model="multipleOrWordSearchTabTwoOne" type="text" id="myInput"
+                onkeyup="myFunction()" placeholder="Enter nomalize arabic words"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter nomalize arabic words"><span style="padding-top: 12px;"
+              <input dir="rtl" wire:model="multipleOrWordSearchTabTwoTwo" type="text" id="myInput"
+                onkeyup="myFunction()" placeholder="Enter nomalize arabic words"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter nomalize arabic words">
+              <input dir="rtl" wire:model="multipleOrWordSearchTabTwoThree" type="text" id="myInput"
+                onkeyup="myFunction()" placeholder="Enter nomalize arabic words">
             </div>
             <div style="overflow-x:auto;">
               <table id="myTable">
@@ -91,10 +88,6 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat Arabic Description</th>
                 </tr>
-                @php
-                $sl = ($multiple_or_words_search_tab_two->perPage() *
-                $multiple_or_words_search_tab_two->currentPage())-($multiple_or_words_search_tab_two->perPage() - 1)
-                @endphp
                 @if ($multiple_or_words_search_tab_two->count() > 0)
                 @foreach ($multiple_or_words_search_tab_two as $ayat_word)
                 <tr>
@@ -114,14 +107,14 @@
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabThree') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter actual arabic words in quran"><span style="padding-top: 12px;"
+              <input dir="rtl" wire:model="multipleOrWordSearchTabThreeOne" type="text" id="myInput"
+                onkeyup="myFunction()" placeholder="Enter actual arabic words in quran"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter actual arabic words in quran"><span style="padding-top: 12px;"
+              <input dir="rtl" wire:model="multipleOrWordSearchTabThreeTwo" type="text" id="myInput"
+                onkeyup="myFunction()" placeholder="Enter actual arabic words in quran"><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input dir="rtl" type="text" id="myInput" onkeyup="myFunction()"
-                placeholder="Enter actual arabic words in quran">
+              <input dir="rtl" wire:model="multipleOrWordSearchTabThreeThree" type="text" id="myInput"
+                onkeyup="myFunction()" placeholder="Enter actual arabic words in quran">
             </div>
             <div style="overflow-x:auto;">
               <table id="myTable">
@@ -130,16 +123,12 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat Arabic Description </th>
                 </tr>
-                @php
-                $sl = ($multiple_or_words_search_tab_three->perPage() *
-                $multiple_or_words_search_tab_three->currentPage())-($multiple_or_words_search_tab_three->perPage() - 1)
-                @endphp
                 @if ($multiple_or_words_search_tab_three->count() > 0)
                 @foreach ($multiple_or_words_search_tab_three as $ayat_word)
                 <tr>
-                  <td>{{ $ayat_word->surah_no }}</td>
-                  <td>{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ $ayat_word->surah_number }}</td>
+                  <td>{{ $ayat_word->ayat_number }}</td>
+                  <td>{{ $ayat_word->ayat_arabic_description }}</td>
                 </tr>
                 @endforeach
                 @else

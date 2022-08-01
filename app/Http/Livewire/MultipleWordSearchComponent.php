@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\AyatWord;
+use App\Models\SuraAyat;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -11,12 +12,9 @@ class MultipleWordSearchComponent extends Component
     use WithPagination;
     public $sortingValue = 10, $searchTerm;
     public $multipleWordSearch, $multipleWordSearchTwo, $multipleWordSearchThree;
-
-    public $multipleWordSearchTabTwo;
-    public $multipleWordSearchTabThree;
-
+    public $multipleWordSearchTabTwoOne, $multipleWordSearchTabTwoTwo, $multipleWordSearchTabTwoThree;
+    public $multipleWordSearchTabThreeOne, $multipleWordSearchTabThreeTwo, $multipleWordSearchTabThreeThree;
     public $tabStatus = 'tabOne';
-
 
     public function tabchnage($value)
     {
@@ -51,10 +49,72 @@ class MultipleWordSearchComponent extends Component
                 $allData->push($resultall);
             }
         }
-
         $multiple_words_search = $allData->sortBy('surah_no')->paginate($this->sortingValue);
 
+        // tab two
+        $allDataTwo = collect([]);
+        if ($this->multipleWordSearchTabTwoOne != null || $this->multipleWordSearchTabTwoTwo != null || $this->multipleWordSearchTabTwoThree != null) {
+            if ($this->multipleWordSearchTabTwoOne != null) {
+                $multiple_words_search_tab_two = AyatWord::where('normalize_word', 'like', '%' . $this->multipleWordSearchTabTwoOne . '%')->get();
+                foreach ($multiple_words_search_tab_two as $result) {
+                    $allDataTwo->push($result);
+                }
+            }
+            if ($this->multipleWordSearchTabTwoTwo != null) {
+                $multiple_words_search_tab_two2 = AyatWord::where('normalize_word', 'like', '%' . $this->multipleWordSearchTabTwoTwo . '%')->get();
+                foreach ($multiple_words_search_tab_two2 as $result2) {
+                    $allDataTwo->push($result2);
+                }
+            }
+            if ($this->multipleWordSearchTabTwoThree != null) {
+                $multiple_words_search_tab_two3 = AyatWord::where('normalize_word', 'like', '%' . $this->multipleWordSearchTabTwoThree . '%')->get();
+                foreach ($multiple_words_search_tab_two3 as $result3) {
+                    $allDataTwo->push($result3);
+                }
+            }
+        } else {
+            $multiple_words_searchall = AyatWord::all();
+            foreach ($multiple_words_searchall as $resultall) {
+                $allDataTwo->push($resultall);
+            }
+        }
+        $multiple_words_search_tab_two = $allDataTwo->sortBy('surah_no')->paginate($this->sortingValue);
 
-        return view('livewire.multiple-word-search-component', ['multiple_words_search' => $multiple_words_search])->layout('layouts.base');
+        // tab three
+        $allDataThree = collect([]);
+        if ($this->multipleWordSearchTabThreeOne != null || $this->multipleWordSearchTabThreeTwo != null || $this->multipleWordSearchTabThreeThree != null) {
+            if ($this->multipleWordSearchTabThreeOne != null) {
+                $multiple_words_search_tab_three = SuraAyat::where('ayat_arabic_description', 'like', '%' . $this->multipleWordSearchTabThreeOne . '%')->get();
+                foreach ($multiple_words_search_tab_three as $result) {
+                    $allDataThree->push($result);
+                }
+            }
+            if ($this->multipleWordSearchTabThreeTwo != null) {
+                $multiple_words_search_tab_three2 = SuraAyat::where('ayat_arabic_description', 'like', '%' . $this->multipleWordSearchTabThreeTwo . '%')->get();
+                foreach ($multiple_words_search_tab_three2 as $result2) {
+                    $allDataThree->push($result2);
+                }
+            }
+            if ($this->multipleWordSearchTabThreeThree != null) {
+                $multiple_words_search_tab_three3 = SuraAyat::where('ayat_arabic_description', 'like', '%' . $this->multipleWordSearchTabThreeThree . '%')->get();
+                foreach ($multiple_words_search_tab_three3 as $result3) {
+                    $allDataThree->push($result3);
+                }
+            }
+        } else {
+            $multiple_words_searchall3 = SuraAyat::all();
+            foreach ($multiple_words_searchall3 as $resultall3) {
+                $allDataThree->push($resultall3);
+            }
+            
+        }
+        
+        $multiple_words_search_tab_three = $allDataThree->sortBy('surah_number')->paginate($this->sortingValue);
+        
+
+        return view('livewire.multiple-word-search-component', [
+            'multiple_words_search' => $multiple_words_search, 
+            'multiple_words_search_tab_two'=>$multiple_words_search_tab_two,
+            'multiple_words_search_tab_three'=>$multiple_words_search_tab_three])->layout('layouts.base');
     }
 }

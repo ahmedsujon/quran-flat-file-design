@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class SuraAyat extends Model
 {
     use HasFactory;
+    protected $table = 'sura_ayats';
     protected $filable = [
         'surah_number',
         'ayat_number',
