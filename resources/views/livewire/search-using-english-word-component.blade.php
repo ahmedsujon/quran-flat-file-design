@@ -122,13 +122,13 @@
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabThree') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingEnglishWordTabThreeOne" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingEnglishWordTabThreeTwo" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
                 class="justify-content-center">AND</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingEnglishWordTabThreeThree" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject..">
             </div>
             <div style="overflow-x:auto;">
@@ -138,15 +138,12 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat English Description </th>
                 </tr>
-                @php
-                $sl = ($search_using_english_word_tab_three->perPage() * $search_using_english_word_tab_three->currentPage())-($search_using_english_word_tab_three->perPage() - 1)
-                @endphp
                 @if ($search_using_english_word_tab_three->count() > 0)
                 @foreach ($search_using_english_word_tab_three as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}</td>
                   <td>{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
                 </tr>
                 @endforeach
                 @else

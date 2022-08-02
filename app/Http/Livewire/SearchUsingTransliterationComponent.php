@@ -56,33 +56,7 @@ class SearchUsingTransliterationComponent extends Component
         $search_using_transliteration_two = $allDataTwo->sortBy('surah_no')->paginate($this->sortingValue);
 
         // tab three
-        $allDataThree = collect([]);
-        if ($this->searchUsingTransliterationTabThreeOne != null || $this->searchUsingTransliterationTabThreeTwo != null || $this->searchUsingTransliterationTabThreeThree != null) {
-            if ($this->searchUsingTransliterationTabThreeOne != null) {
-                $search_using_transliteration_three = AyatWord::where('transliteration_word', 'like', '%' . $this->searchUsingTransliterationTabThreeOne . '%')->get();
-                foreach ($search_using_transliteration_three as $result) {
-                    $allDataThree->push($result);
-                }
-            }
-            if ($this->searchUsingTransliterationTabThreeTwo != null) {
-                $search_using_transliteration_three2 = AyatWord::where('transliteration_word', 'like', '%' . $this->searchUsingTransliterationTabThreeTwo . '%')->get();
-                foreach ($search_using_transliteration_three2 as $result2) {
-                    $allDataThree->push($result2);
-                }
-            }
-            if ($this->searchUsingTransliterationTabThreeThree != null) {
-                $search_using_transliteration_three3 = AyatWord::where('transliteration_word', 'like', '%' . $this->searchUsingTransliterationTabThreeThree . '%')->get();
-                foreach ($search_using_transliteration_three3 as $result3) {
-                    $allDataThree->push($result3);
-                }
-            }
-        } else {
-            $search_using_transla_searchall = AyatWord::all();
-            foreach ($search_using_transla_searchall as $resultall) {
-                $allDataThree->push($resultall);
-            }
-        }
-        $search_using_transliteration_three = $allDataThree->sortBy('surah_no')->paginate($this->sortingValue);
+        $search_using_transliteration_three = AyatWord::where('transliteration_word', 'like', '%' . $this->searchUsingTransliterationTabThreeOne . '%')->where('transliteration_word', 'like', '%' . $this->searchUsingTransliterationTabThreeTwo . '%')->where('transliteration_word', 'like', '%' . $this->searchUsingTransliterationTabThreeThree . '%')->orderBy('surah_no', 'ASC')->paginate($this->sortingValue);
 
 
         return view(

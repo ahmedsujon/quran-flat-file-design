@@ -13,7 +13,7 @@ class SearchUsingEnglishWordComponent extends Component
 
     public $searchUsingEnglishWord;
     public $searchUsingEnglishWordTabTwo;
-    public $searchUsingEnglishWordTabThree;
+    public $searchUsingEnglishWordTabThreeOne, $searchUsingEnglishWordTabThreeTwo, $searchUsingEnglishWordTabThreeThree;
 
     public $tabStatus = 'tabOne';
 
@@ -30,8 +30,8 @@ class SearchUsingEnglishWordComponent extends Component
         $search_using_english_word_tab_two = AyatWord::where('word_sub_category', 'like', '%'.$this->searchUsingEnglishWordTabTwo.'%')
         ->paginate($this->sortingValue);
 
-        $search_using_english_word_tab_three = AyatWord::where('word_sub_category', 'like', '%'.$this->searchUsingEnglishWordTabThree.'%')
-        ->paginate($this->sortingValue);
+        $search_using_english_word_tab_three = AyatWord::where('word_sub_category', 'like', '%' . $this->searchUsingEnglishWordTabThreeOne . '%')->where('word_sub_category', 'like', '%' . $this->searchUsingEnglishWordTabThreeTwo . '%')->where('word_sub_category', 'like', '%' . $this->searchUsingEnglishWordTabThreeThree . '%')->orderBy('surah_no', 'ASC')->paginate($this->sortingValue);
+
 
         return view('livewire.search-using-english-word-component', [
             'search_using_english_word'=>$search_using_english_word,

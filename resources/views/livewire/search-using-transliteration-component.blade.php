@@ -72,7 +72,7 @@
             </div>
             {{ $search_using_translitaration->links('pagination-links-table') }}
           </div>
-          {{-- <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
+          <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
               <input type="text" wire:model="searchUsingTransliterationTabTwoOne" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word.."><span style="padding-top: 12px;"
@@ -136,7 +136,7 @@
                 <tr>
                   <td>{{ $ayat_word->surah_no }}</td>
                   <td>{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
                 </tr>
                 @endforeach
                 @else
