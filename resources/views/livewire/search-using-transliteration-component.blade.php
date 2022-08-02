@@ -87,17 +87,17 @@
               <table id="myTable">
                 <tr class="header">
                   <th>Sura-Ayat</th>
-                  <th>Ntransliteration Word</th>
+                  <th>Transliteration Word</th>
                   <th>English Word-Subject-Category</th>
                   <th>Inference Flag</th>
                   <th>Sura Ayat English Description</th>
                   <th>Hadith Description</th>
                 </tr>
-                @if ($search_using_translitaration_tab_two->count() > 0)
-                @foreach ($search_using_translitaration_tab_two as $ayat_word)
+                @if ($search_using_transliteration_two->count() > 0)
+                @foreach ($search_using_transliteration_two as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->Transliteration_word }}</td>
+                  <td>{{ $ayat_word->transliteration_word }}</td>
                   <td>{{ $ayat_word->word_sub_category }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
@@ -111,7 +111,7 @@
                 @endif
               </table>
             </div>
-            {{ $search_using_translitaration_tab_two->links('pagination-links-table') }}
+            {{ $search_using_transliteration_two->links('pagination-links-table') }}
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabThree') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
@@ -131,8 +131,8 @@
                   <th>Ayat Number</th>
                   <th>Sura Ayat English Description </th>
                 </tr>
-                @if ($search_using_translitaration_tab_three->count() > 0)
-                @foreach ($search_using_translitaration_tab_three as $ayat_word)
+                @if ($search_using_transliteration_three->count() > 0)
+                @foreach ($search_using_transliteration_three as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}</td>
                   <td>{{ $ayat_word->ayat_no }}</td>
@@ -146,8 +146,8 @@
                 @endif
               </table>
             </div>
-            {{ $search_using_translitaration_tab_three->links('pagination-links-table') }}
-          </div> --}}
+            {{ $search_using_transliteration_three->links('pagination-links-table') }}
+          </div>
         </div>
       </div>
     </div>
