@@ -146,13 +146,8 @@
                 @endif
               </table>
             </div>
-<<<<<<< HEAD
             {{ $search_using_transliteration_three->links('pagination-links-table') }}
           </div>
-=======
-            {{ $search_using_translitaration_tab_three->links('pagination-links-table') }}
-          </div> --}}
->>>>>>> bf8783e12b4c93d87c1dd4eafd35975940f3dfe4
         </div>
       </div>
     </div>
