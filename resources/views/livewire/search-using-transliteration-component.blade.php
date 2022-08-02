@@ -72,7 +72,7 @@
             </div>
             {{ $search_using_translitaration->links('pagination-links-table') }}
           </div>
-          <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
+          {{-- <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
               <input type="text" wire:model="searchUsingTransliterationTabTwoOne" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple transliteration word.."><span style="padding-top: 12px;"
@@ -147,7 +147,7 @@
               </table>
             </div>
             {{ $search_using_translitaration_tab_three->links('pagination-links-table') }}
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
