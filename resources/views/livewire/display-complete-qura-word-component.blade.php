@@ -22,15 +22,11 @@
           <table id="myTable">
             <tr class="header">
               <th>Sura-Ayat</th>
-              <th>English Word Subject</th>
-              <th>English Word Sub-Subject</th>
+              <th>English-Word-Subject-Category,</th>
+              <th>English-Word-Subsubject-Subcategory</th>
               <th>Sura Ayat English Description</th>
               <th>Hadith Description</th>
             </tr>
-            @php
-            $sl = ($display_complete_quran_word->perPage() *
-            $display_complete_quran_word->currentPage())-($display_complete_quran_word->perPage() - 1)
-            @endphp
             @if ($display_complete_quran_word->count() > 0)
             @foreach ($display_complete_quran_word as $ayat_word)
             <tr>
