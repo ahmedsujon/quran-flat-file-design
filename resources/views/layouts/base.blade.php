@@ -83,19 +83,12 @@
                         <span class="fs-4">Quran Search</span>
                     </a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="{{ route('website') }}" class="nav-link active" aria-current="page">Home</a></li>
                     </ul>
                 </header>
             </div>
         </div>
         {{ $slot }}
-
-        <div class="container">
-            <footer class="py-3 my-4">
-                <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
-            </footer>
-        </div>
     </main>
     @stack('scripts')
     @livewireScripts
