@@ -43,7 +43,6 @@
                 <tr class="header">
                   <th>Sura-Ayat</th>
                   <th>English Word Subject Category</th>
-                  <th>English Word Subject Sub-Category</th>
                   <th>Inference Flag</th>
                   <th>Sura Ayat English Description</th>
                   <th>Hadith Description</th>
@@ -55,8 +54,7 @@
                 @foreach ($search_using_english_word as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->word_sub_category }}</td>
-                  <td>{{ $ayat_word->word_sub_category_description }}</td>
+                  <td>{{ $ayat_word->english_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
                   <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
                   <td>
@@ -77,16 +75,16 @@
           </div>
           <div class="tab-pane fade @if($tabStatus == 'tabTwo') show active @endif">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingEnglishWordTabTwoOne" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingEnglishWordTabTwoTwo" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-                <input type="text" id="myInput" onkeyup="myFunction()"
+                <input type="text" wire:model="searchUsingEnglishWordTabTwoThree" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject.."><span style="padding-top: 12px;"
                 class="justify-content-center">OR</span>
-              <input type="text" id="myInput" onkeyup="myFunction()"
+              <input type="text" wire:model="searchUsingEnglishWordTabTwoFour" id="myInput" onkeyup="myFunction()"
                 placeholder="Enter multiple english word/subject..">
             </div>
             <div style="overflow-x:auto;">
@@ -98,14 +96,11 @@
                   <th>Sura Ayat English Description</th>
                   <th>Hadith Description</th>
                 </tr>
-                @php
-                $sl = ($search_using_english_word_tab_two->perPage() * $search_using_english_word_tab_two->currentPage())-($search_using_english_word_tab_two->perPage() - 1)
-                @endphp
                 @if ($search_using_english_word_tab_two->count() > 0)
                 @foreach ($search_using_english_word_tab_two as $ayat_word)
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
-                  <td>{{ $ayat_word->word_sub_category }}</td>
+                  <td>{{ $ayat_word->english_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
