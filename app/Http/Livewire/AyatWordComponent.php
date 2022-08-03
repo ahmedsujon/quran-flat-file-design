@@ -8,7 +8,7 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class AyatWordComponent extends Component
 {
-    public $sortingValue = 10, $searchTerm;
+    public $sortingValue = 20, $searchTerm;
     
     public function render()
     {

@@ -10,7 +10,7 @@ use Livewire\WithPagination;
 class SingleSearchComponent extends Component
 {
     use WithPagination;
-    public $sortingValue = 5, $searchTerm;
+    public $sortingValue = 20, $searchTerm;
 
     public $singleArabicRootWord;
     public $singleArabicRootWordSecenttab;

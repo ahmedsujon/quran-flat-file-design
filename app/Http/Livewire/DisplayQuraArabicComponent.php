@@ -9,7 +9,7 @@ use Livewire\WithPagination;
 class DisplayQuraArabicComponent extends Component
 {
     use WithPagination;
-    public $sortingValue = 10, $searchTerm;
+    public $sortingValue = 20, $searchTerm;
     public $displayQuraArabic;
     public $displayQuraArabicTabTwo;
     public $tabStatus = 'tabOne';

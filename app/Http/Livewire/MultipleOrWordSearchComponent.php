@@ -10,7 +10,7 @@ use Livewire\WithPagination;
 class MultipleOrWordSearchComponent extends Component
 {
     use WithPagination;
-    public $sortingValue = 10, $searchTerm;
+    public $sortingValue = 20, $searchTerm;
     public $multipleOrWordSearchOne, $multipleOrWordSearchtwo, $multipleOrWordSearchthree;
     public $multipleOrWordSearchTabTwoOne, $multipleOrWordSearchTabTwoTwo, $multipleOrWordSearchTabTwoThree;
     public $multipleOrWordSearchTabThreeOne, $multipleOrWordSearchTabThreeTwo, $multipleOrWordSearchTabThreeThree;

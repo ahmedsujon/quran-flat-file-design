@@ -83,7 +83,8 @@
                         <span class="fs-4">Quran Search</span>
                     </a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="{{ route('website') }}" class="nav-link active" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="{{ route('website') }}" class="nav-link active"
+                                aria-current="page">Home</a></li>
                     </ul>
                 </header>
             </div>

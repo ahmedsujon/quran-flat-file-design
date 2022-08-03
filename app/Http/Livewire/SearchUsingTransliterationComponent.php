@@ -9,7 +9,7 @@ use Livewire\WithPagination;
 class SearchUsingTransliterationComponent extends Component
 {
     use WithPagination;
-    public $sortingValue = 10, $searchTerm;
+    public $sortingValue = 20, $searchTerm;
 
     public $searchUsingTransliterationOne;
     public $searchUsingTransliterationTabTwoOne, $searchUsingTransliterationTabTwoTwo, $searchUsingTransliterationTabTwoThree;

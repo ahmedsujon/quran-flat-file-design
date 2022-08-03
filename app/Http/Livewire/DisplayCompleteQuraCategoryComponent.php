@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class DisplayCompleteQuraCategoryComponent extends Component
 {
-    public $sortingValue = 10, $searchTerm;
+    public $sortingValue = 20, $searchTerm;
     public $displayCompleteQuraCategory;
 
     public function render()
