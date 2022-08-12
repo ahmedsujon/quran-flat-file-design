@@ -80,7 +80,7 @@
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
-                  <td>{{ $ayat_word->arabic_root_word }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_arabic_description }}</td>
                 </tr>
                 @endforeach
                 @else

@@ -46,7 +46,7 @@
                     class="btn btn-primary btn-lg px-4 gap-3">Display
                     Complete Quran Sorted By English Sub-Category</a>
                 <a style="padding: 18px; font-size:16px;" href="{{ route('search.dropdown') }}"
-                    class="btn btn-primary btn-lg px-4 gap-3">Select One From Flowing Searches</a>
+                    class="btn btn-primary btn-lg px-4 gap-3">Select One From following Searches</a>
             </div>
         </div>
     </div>

@@ -45,10 +45,14 @@
             @foreach ($search_dropdowns as $ayat_word)
             <tr>
               <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
+              <td>{{ $ayat_word->english_word }}</td>
               <td>{{ $ayat_word->word_sub_category }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
-              <td>{{ $ayat_word->arabic_root_word }}</td>
+              <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
+              <td>
+                @if (isset($ayat_word->hadithData->hadith_description))
+                {{ $ayat_word->hadithData->hadith_description }}
+                @endif
+              </td>
             </tr>
             @endforeach
             @else

@@ -106,8 +106,12 @@
                   <td>{{ $ayat_word->normalize_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
-                  <td>{{ $ayat_word->inference_flag }}</td>
-                  <td>{{ $ayat_word->inference_flag }}</td>
+                  <td>{{ suraAyatData($ayat_word->surah_no, $ayat_word->ayat_no)->ayat_arabic_description }}</td>
+                  <td>
+                    @if (isset($ayat_word->hadithData->hadith_description))
+                    {{ $ayat_word->hadithData->hadith_description }}
+                    @endif
+                  </td>
                 </tr>
                 @endforeach
                 @else

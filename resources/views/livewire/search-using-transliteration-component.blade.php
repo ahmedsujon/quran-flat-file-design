@@ -53,7 +53,7 @@
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->transliteration_word }}</td>
-                  <td>{{ $ayat_word->word_sub_category }}</td>
+                  <td>{{ $ayat_word->english_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
                   <td>{{ suraAyatData($ayat_word->surah_no,$ayat_word->ayat_no)->ayat_english_description }}</td>
                   <td>
@@ -98,7 +98,7 @@
                 <tr>
                   <td>{{ $ayat_word->surah_no }}:{{ $ayat_word->ayat_no }}</td>
                   <td>{{ $ayat_word->transliteration_word }}</td>
-                  <td>{{ $ayat_word->word_sub_category }}</td>
+                  <td>{{ $ayat_word->english_word }}</td>
                   <td>{{ $ayat_word->inference_flag }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
                   <td>{{ $ayat_word->arabic_root_word }}</td>
